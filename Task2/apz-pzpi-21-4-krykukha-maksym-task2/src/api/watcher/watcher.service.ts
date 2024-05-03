@@ -25,48 +25,7 @@ export class WatcherService {
       return this.prisma.watcher.findFirst({
         where:{id:id}
       })
-    }
-
-    // async updateWatcher(id:string,body:WatcherLoginpDto){
-      
-    //   if (!EmailValidator.validate(body.email) ){
-    //     throw new BadRequestException("Invalid email")
-    //   }
-    //   if (!/^\d{10}$/.test(body.phoneNumber)){
-    //     throw new BadRequestException('Invalid phone number')
-    //   }
-    //   const salt = await bcrypt.genSalt(10);
-    //   const hashedPassword = await bcrypt.hash(body.password,salt)
-    //   const result = await this.prisma.watcher.update({
-    //     where:{id:id},
-    //     data: {
-    //       email: body.email,
-    //       phoneNumber: body.phoneNumber,
-    //       password: hashedPassword,
-    //       watcherName:body.watcherName
-    //     }
-    //   })
-    //   return result
-    // }
-
-    // async updateWatcher(id:string,body){
-    //   try{
-    //     console.log("1")
-    //     const result = await this.prisma.watcher.update({
-    //       where:{id:id},
-    //       data: {
-    //         heartbeat:body.heartbeat
-    //       }
-    //     })
-    //     return result.heartbeat
-    //   }
-    //   catch(e){
-    //     throw new ForbiddenException()
-    //   }
-      
-    // }
-
-  
+    } 
 
     async updateWatcher(id:string,body){
       if (!EmailValidator.validate(body.email) ){

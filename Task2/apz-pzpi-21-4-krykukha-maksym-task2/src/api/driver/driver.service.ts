@@ -20,8 +20,6 @@ export class DriverService {
     }
 
     async getDrivers(): Promise<any>{
-      
-
         return this.prisma.driver.findMany()
     }
     async translateCity(cityName: string, language: string) {
