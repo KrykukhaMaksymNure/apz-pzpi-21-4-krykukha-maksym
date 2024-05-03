@@ -12,5 +12,4 @@ export const cityTranslations = {
     Kyiv: 'Київ',
     Lviv: 'Львів',
     Odesa: 'Одеса',
-    // Add more cities as needed
   };
